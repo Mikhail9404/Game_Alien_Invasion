@@ -1,7 +1,7 @@
 import pygame
 from pygame.sprite import Sprite
 
-class Bulet(Sprite):
+class Bullet(Sprite):
     """Класс для управления снарядами, выпущенными кораблем."""
 
     def __init__(self, ai_game):
