@@ -16,3 +16,8 @@ class Settings():
 
         # Настройка скорости корабля.
         self.ship_speed = 1.5
+
+        # Настройка пришельцев
+        self.alien_speed = 0.4
+        self.fleet_drop_speed = 8
+        self.fleet_direction = 1 # Положительно значение - движение вправо, отрицательное - влево.
