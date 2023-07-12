@@ -38,7 +38,14 @@ class Scoreboard():
     def check_high_score(self):
         """Проверяет, появился ли новый рекорд."""
         if self.stats.score > self.stats.high_score:
-            self.stats.high_score = self.stats.score
+            # self.stats.high_score = self.stats.score
+            highscore_file = './resources/data/high_score.txt'
+
+            with open(highscore_file, encoding='utf-8') as f:
+                record = f.read()
+                if int(record) < self.stats.score:
+                    with open(highscore_file, "w", encoding='utf-8') as f:
+                        f.write(str(self.stats.score))
             self.prep_high_score()
 
     def prep_high_score(self):
